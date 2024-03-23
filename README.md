@@ -28,6 +28,8 @@
 
 - Acsess webinar here [here](https://www.youtube.com/watch?v=0o2d46kyR1Q)
 
+- For source code [here](https://pyimagesearch.com/2022/10/10/introduction-to-infrared-vision-near-vs-mid-far-infrared-images/)
+
 ---
 
 ### RAB
