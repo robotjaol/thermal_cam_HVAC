@@ -26,6 +26,8 @@
 
 - https://www.rgmvision.com/infrared-computer-vision/
 
+- Acsess webinar here [here](https://www.youtube.com/watch?v=0o2d46kyR1Q)
+
 ---
 
 ### RAB
