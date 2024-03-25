@@ -17,10 +17,11 @@ In this diagram, there are three important components for building this project.
 So, this is a simple explanation about the flowchart. In this flowchart diagram, it starts with the thermal camera measuring people's temperature, and then the temperature data is controlled and calculated by the mini PC. When the people's temperature exceeds the reference temperature, the universal remote will increase the airflow from the AC. Conversely, when the people's temperature falls below the reference temperature, the universal remote control will decrease the airflow from the AC.
 
 ### Electrical Architecture
-
+This is a simple explanation of the general electrical architecture. i will explain how to wire those three important components
 
 
 ### Communication Architecture
+In this section, the communication architecture explains how those three components can comunicate with each other.
 
 ### reference that i collected from internet
 
