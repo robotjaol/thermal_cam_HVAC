@@ -99,3 +99,5 @@ The trigger diagram is used to generate triggers for the Arduino transmitter to 
 - AI Thermometer [here](https://github.com/tomasz-lewicki/ai-thermometer)
 
 - How to build universal remoe [here](https://www.youtube.com/watch?v=m7z4CU5mw9E)
+
+- website to build universal remote [here](https://www.viralsciencecreativity.com/post/universal-ir-remote-controller)
