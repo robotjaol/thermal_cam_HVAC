@@ -2,7 +2,7 @@
 
 > PLC SCSL Laboratory Project Base Learning
 
-### Diagram Plan
+### General Diagram Plan
 
 Here's the diagram that i made
 
@@ -10,7 +10,7 @@ Here's the diagram that i made
 
 In this diagram, there are three important components for building this project. Firstly, a thermal camera is used to measure people's temperature in the laboratory. Secondly, a mini PC is utilized to control and calculate the temperature obtained from the camera. Lastly, a universal remote control is employed to adjust or regulate the airflow emitted by the AC.
 
-### Flowchart
+### General Flowchart
 
 ![img](doc/img/flowchart.png)
 
@@ -23,7 +23,32 @@ This is a simple explanation of the general electrical architecture. i will expl
 ### General Communication Architecture
 In this section, the communication architecture explains how those three components can comunicate with each other
 
-### reference that i collected from internet
+---
+
+### Component You need it for this Project
+
+#### 1. Mini PC
+- Rasberry 4 RAM 8GB [here](https://shp.ee/sb0f2v0)
+
+#### 2. Thermal Camera
+- InfiRAY T3S [here](https://tokopedia.link/vz7A5uvbfIb)
+
+#### 3. Universal Remote
+- Arduino NANO
+
+- IR Receiver
+
+- IR LED Tactile Button
+
+- 1K Resistor
+
+- 100E Resistor
+
+- Bread Board or PCB
+
+- Cable or Jumper
+
+## Reference that i collected from internet
 
 - Thermal camera sensor [here](https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor)
 
@@ -50,24 +75,3 @@ In this section, the communication architecture explains how those three compone
 - PyImage Search [here](https://pyimagesearch.com/2022/10/24/thermal-vision-fever-detector-with-python-and-opencv-starter-project/)
 
 - AI Thermometer [here](https://github.com/tomasz-lewicki/ai-thermometer)
-
----
-
-### Component You need it for this Project
-
-#### 1. Mini PC
-- Rasberry 4 RAM 8GB [here](https://shp.ee/sb0f2v0)
-
-#### 2. Thermal Camera
-- InfiRAY T3S [here](https://tokopedia.link/vz7A5uvbfIb)
-
-#### 3. Universal Remote
-- Arduino NANO
-
-- IR Receiver
-
-- IR LED Tactile Button
-
-- 1K Resistor
-
-- 100E Resistor
