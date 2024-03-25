@@ -1,8 +1,23 @@
-## Thermal Camera HVAC
+# Thermal Camera HVAC
+PLC SCSL Laboratory Project Base Learning
 
-### PLC SCSL Laboratory Project Base Learning
+### Diagram Plan
+Here diagram that i was make
 
->reference
+![img](doc/img/diagram_plan.png)
+
+### Flowchart
+
+![img](doc/img/flowchart.png)
+
+
+### Electrical Architecture
+
+
+### Communication Architecture
+
+
+### reference
 
 - https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor
 
@@ -35,3 +50,5 @@
 ---
 
 ### RAB
+
+follow this [link](https://docs.google.com/spreadsheets/d/1vpriAi5HHOCgwNC7Mt6s1HICf34Qzx8J2fEp0PEnn2U/edit#gid=0)

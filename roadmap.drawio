@@ -1,0 +1,174 @@
+<mxfile host="app.diagrams.net" modified="2024-03-25T01:46:13.196Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="3Xh9jlRIcmeDrwrSvqvT" version="24.1.0" type="device">
+  <diagram name="Page-1" id="YuvekOQx8xAtep3oEcWD">
+    <mxGraphModel dx="1990" dy="1065" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-1" value="Temp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="PVKdBOxZIRoiB5uvlUZZ-2" target="PVKdBOxZIRoiB5uvlUZZ-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-5" value="IR" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="PVKdBOxZIRoiB5uvlUZZ-2" target="qJgImqPm416msXqpPhX8-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-11" value="IR" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="PVKdBOxZIRoiB5uvlUZZ-2" target="qJgImqPm416msXqpPhX8-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-14" value="IR" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="PVKdBOxZIRoiB5uvlUZZ-2" target="qJgImqPm416msXqpPhX8-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-16" value="IR" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PVKdBOxZIRoiB5uvlUZZ-2" target="qJgImqPm416msXqpPhX8-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-2" value="THERMAL CAMERA" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="130" y="259.97" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-3" value="UART" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="PVKdBOxZIRoiB5uvlUZZ-4" target="PVKdBOxZIRoiB5uvlUZZ-9" edge="1">
+          <mxGeometry x="-0.2727" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-4" value="MINI PC/ RASPY" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="259.97" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-5" value="Trig" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="PVKdBOxZIRoiB5uvlUZZ-9" target="PVKdBOxZIRoiB5uvlUZZ-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-6" value="Trig" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="PVKdBOxZIRoiB5uvlUZZ-9" target="PVKdBOxZIRoiB5uvlUZZ-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-7" value="Trig" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="PVKdBOxZIRoiB5uvlUZZ-9" target="PVKdBOxZIRoiB5uvlUZZ-19" edge="1">
+          <mxGeometry x="-0.36" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-8" value="Trig" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="PVKdBOxZIRoiB5uvlUZZ-9" target="PVKdBOxZIRoiB5uvlUZZ-13" edge="1">
+          <mxGeometry x="-0.4072" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-9" value="UNIVERSAL REMOTE&lt;br&gt;MICORCONTROLLER" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="475" y="260" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="PVKdBOxZIRoiB5uvlUZZ-38" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="574.9999999999968" y="395" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-11" value="IR" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="505" y="370" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="PVKdBOxZIRoiB5uvlUZZ-13" target="PVKdBOxZIRoiB5uvlUZZ-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-13" value="IR" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="605" y="320" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="PVKdBOxZIRoiB5uvlUZZ-16" target="PVKdBOxZIRoiB5uvlUZZ-39" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-16" value="IR" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="505" y="150" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-17" value="AC" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="730" y="320" width="75" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-18" value="&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Diagram Plan&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;PBL Thermal Camera HVAC&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="270" y="40" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="PVKdBOxZIRoiB5uvlUZZ-19" target="PVKdBOxZIRoiB5uvlUZZ-40" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-19" value="IR" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="605" y="200" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-38" value="AC" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="730" y="395" width="75" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-39" value="AC" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="730" y="120" width="75" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PVKdBOxZIRoiB5uvlUZZ-40" value="AC" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="730" y="199.97" width="75" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-17" value="TEMP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="qJgImqPm416msXqpPhX8-1" target="PVKdBOxZIRoiB5uvlUZZ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-1" value="People" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="400" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-12" value="TEMP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="qJgImqPm416msXqpPhX8-2" target="PVKdBOxZIRoiB5uvlUZZ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-2" value="People" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-6" value="TEMP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="qJgImqPm416msXqpPhX8-3" target="PVKdBOxZIRoiB5uvlUZZ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-3" value="People" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="125" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-9" value="TEMP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="qJgImqPm416msXqpPhX8-4" target="PVKdBOxZIRoiB5uvlUZZ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-4" value="People" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="190" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qJgImqPm416msXqpPhX8-20" target="qJgImqPm416msXqpPhX8-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-20" value="Start" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="345" y="605" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qJgImqPm416msXqpPhX8-21" target="qJgImqPm416msXqpPhX8-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-21" value="&lt;i&gt;Thermal Camera&lt;/i&gt;&lt;div&gt;mengumpulkan data&amp;nbsp;&lt;/div&gt;&lt;div&gt;suhu orang di dalam&amp;nbsp;&lt;/div&gt;&lt;div&gt;ruangan&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="287.5" y="705" width="215" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qJgImqPm416msXqpPhX8-22" target="qJgImqPm416msXqpPhX8-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-22" value="Data dikalkulasi oleh Raspi&amp;nbsp;&lt;div&gt;untuk memperoleh&lt;/div&gt;&lt;div&gt;Hasil Temperatur&lt;/div&gt;&lt;div&gt;rata-rata&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="323.75" y="825" width="142.5" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-29" value="True" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qJgImqPm416msXqpPhX8-26" target="qJgImqPm416msXqpPhX8-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-31" value="False" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qJgImqPm416msXqpPhX8-26" target="qJgImqPm416msXqpPhX8-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-26" value="Temperatur &amp;gt; [&lt;i&gt;Referensi Suhu&lt;/i&gt;]" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="293.75" y="935" width="202.5" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qJgImqPm416msXqpPhX8-28" target="qJgImqPm416msXqpPhX8-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-28" value="&lt;div&gt;raspberry pi&lt;/div&gt;&amp;nbsp;mengirim data ke&lt;div&gt;&lt;i&gt;remote &lt;/i&gt;untuk&lt;/div&gt;&lt;div&gt;&lt;b&gt;menaikan&lt;/b&gt; suhu&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="305" y="1145" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-30" value="&lt;div&gt;raspberry pi&lt;/div&gt;&amp;nbsp;mengirim data ke&lt;div&gt;&lt;i&gt;remote &lt;/i&gt;untuk&lt;/div&gt;&lt;div&gt;&lt;b&gt;menaikan&lt;/b&gt; suhu&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="540" y="965" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-32" value="End" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="345" y="1275" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qJgImqPm416msXqpPhX8-30" target="qJgImqPm416msXqpPhX8-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-35" value="&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Diagram Plan&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;PBL Thermal Camera HVAC&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="530" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-36" value="By: Jona" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1305" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-37" value="By: Jona" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="425" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qJgImqPm416msXqpPhX8-38" value="&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Electrical Architecture&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;PBL Thermal Camera HVAC&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="45" width="250" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
