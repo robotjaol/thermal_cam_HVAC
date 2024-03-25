@@ -45,7 +45,7 @@ In this diagram, I use Arduino to transmit and adjust values back to many device
 #### For Triggered Transfer
 ![Diagram](doc/img/ur_trigger.png)
 
-The trigger diagram is used to generate triggers for the Arduino transmitter to adjust values transmitted to other devices.
+The trigger diagram is used to generate triggers for the Arduino transmitter to adjust values transmitted to other devices, using RX TX.
 
 ### Component You need it for this Project
 
