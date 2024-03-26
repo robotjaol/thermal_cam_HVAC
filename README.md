@@ -72,7 +72,7 @@ The trigger diagram is used to generate triggers for the Arduino transmitter to 
 
 ## Reference that i collected from internet
 
-- Thermal camera sensor [here](https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor)
+- Thermal camera AMG8833 sensor [here](https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor)
 
 - basic website how2electronics [here](https://how2electronics.com/diy-thermal-camera-with-raspberry-pi-amg8833-sensor/)
 
@@ -101,3 +101,6 @@ The trigger diagram is used to generate triggers for the Arduino transmitter to 
 - How to build universal remoe [here](https://www.youtube.com/watch?v=m7z4CU5mw9E)
 
 - website to build universal remote [here](https://www.viralsciencecreativity.com/post/universal-ir-remote-controller)
+
+- Thermal Camera TC100 [here](https://github.com/leswright1977/PyThermalCamera/)
+
