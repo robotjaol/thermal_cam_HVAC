@@ -7,32 +7,32 @@ Real time & multiple people body temperature and repository rate estimating with
 ### Dependencies
 
 - MATLAB required
-    - Image Acquisition Toolbox
-    - Image Acquisition Toolbox Support Package for GigE Vision Hardware
+  - Image Acquisition Toolbox
+  - Image Acquisition Toolbox Support Package for GigE Vision Hardware
 - Python packages
-    - insightface
-    - opencv-python
-    - mxnet-cu90mkl (GPU) or mxnet-mkl (CPU)
-    - etc
+  - insightface
+  - opencv-python
+  - mxnet-cu90mkl (GPU) or mxnet-mkl (CPU)
+  - etc
 - GIGE thermal camera (tested on [FLIR A35](https://www.flir.com/products/a35/))
 
 ### Quick Start
 
 Start a real-time body temperature and repository rate monitoring.
 
-``` bash
+```bash
 python ./monitor.py -e <your camera id>
 ```
 
 Record and save to file.
 
-``` bash
+```bash
 python ./monitor.py -r <your camera id> "/path/to/file.hdf5"
 ```
 
 Review body temperature and repository rate monitoring from a file.
 
-``` bash
+```bash
 python ./monitor.py -e "/path/to/file.hdf5"
 ```
 
@@ -49,4 +49,3 @@ See `./thermal_face_tracker/config.py` for configuration.
 ### See Also
 
 https://github.com/boston-dynamics/bosdyn-hospital-bot
-

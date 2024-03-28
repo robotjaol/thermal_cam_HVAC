@@ -25,15 +25,20 @@ class Visualizer(object):
                 self.thermal_frame_queue.pop(0)
                 self.thermal_frame_queue[0].detach()
             self.thermal_frame_queue.append(thermal_frame)
-            annotation_frame = cv2.UMat(np.stack([thermal_frame.grey_frame] * 3, 2))
-            self._visualize_bounding_boxes(annotation_frame, thermal_frame.thermal_faces)
+            annotation_frame = cv2.UMat(
+                np.stack([thermal_frame.grey_frame] * 3, 2))
+            self._visualize_bounding_boxes(
+                annotation_frame, thermal_frame.thermal_faces)
             if visualize_temperature:
-                self._visualize_temperatures(annotation_frame, thermal_frame.thermal_faces)
+                self._visualize_temperatures(
+                    annotation_frame, thermal_frame.thermal_faces)
             if visualize_breath_rate:
-                self._visualize_breath_rates(annotation_frame, thermal_frame.thermal_faces)
+                self._visualize_breath_rates(
+                    annotation_frame, thermal_frame.thermal_faces)
             if visualize_breath_curve:
                 self._visualize_breath_curves(thermal_frame.thermal_faces)
-            cv2.imshow('thermal monitoring', cv2.resize(annotation_frame, config.VISUALIZATION_RESOLUTION))
+            cv2.imshow('thermal monitoring', cv2.resize(
+                annotation_frame, config.VISUALIZATION_RESOLUTION))
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
         cv2.destroyAllWindows()
@@ -74,9 +79,9 @@ class Visualizer(object):
                 annotation_frame,
                 str(temperature)[:5] + ' C',
                 (face.bounding_box[0], face.bounding_box[3] + 12),
-                cv2.FONT_HERSHEY_SIMPLEX, 
-                0.5, 
-                utils.uuid_to_color(face.uuid, mode='bgr'), 
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.5,
+                utils.uuid_to_color(face.uuid, mode='bgr'),
                 1
             )
 
@@ -99,9 +104,9 @@ class Visualizer(object):
                 annotation_frame,
                 str(breath_rate * 60)[:5] + ' bpm',
                 (face.bounding_box[0], face.bounding_box[3] + 24),
-                cv2.FONT_HERSHEY_SIMPLEX, 
-                0.5, 
-                utils.uuid_to_color(face.uuid, mode='bgr'), 
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.5,
+                utils.uuid_to_color(face.uuid, mode='bgr'),
                 1
             )
 
@@ -119,12 +124,14 @@ class Visualizer(object):
             self.breath_curve_ax_pool = {}
         for index, face in enumerate(faces):
             if face.uuid not in self.breath_curve_ax_pool:
-                ax = self.breath_curve_figure.add_subplot(len(faces), 1, index + 1, label=face.uuid)
+                ax = self.breath_curve_figure.add_subplot(
+                    len(faces), 1, index + 1, label=face.uuid)
                 self.breath_curve_ax_pool[face.uuid] = ax
             else:
                 ax = self.breath_curve_ax_pool[face.uuid]
             ax.clear()
-            ax.plot(*face.breath_samples, c=utils.uuid_to_color(face.uuid, ub=1))
+            ax.plot(*face.breath_samples,
+                    c=utils.uuid_to_color(face.uuid, ub=1))
             ax.set_title(face.uuid[:4])
         plt.draw()
         plt.pause(0.001)

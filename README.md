@@ -8,26 +8,33 @@ Here's the diagram that i made
 
 ![img](doc/img/diagram_plan.png)
 
-In this diagram, there are three important components for building this project. Firstly, a thermal camera is used to measure people's temperature in the laboratory. Secondly, a mini PC is utilized to control and calculate the temperature obtained from the camera. Lastly, a universal remote control is employed to adjust or regulate the airflow emitted by the AC.
+- In this diagram, there are three important components for building this project. Firstly, a thermal camera is used to measure people's temperature in the laboratory. Secondly, a mini PC is utilized to control and calculate the temperature obtained from the camera. Lastly, a universal remote control is employed to adjust or regulate the airflow emitted by the AC.
+
+#### Device looks like
+
+![img](doc/img/device.png)
+
+system looks like this
 
 ### General Flowchart
 
 ![img](doc/img/flowchart.png)
 
-So, this is a simple explanation about the flowchart. In this flowchart diagram, it starts with the thermal camera measuring people's temperature, and then the temperature data is controlled and calculated by the mini PC. When the people's temperature exceeds the reference temperature, the universal remote will increase the airflow from the AC. Conversely, when the people's temperature falls below the reference temperature, the universal remote control will decrease the airflow from the AC.
+- So, this is a simple explanation about the flowchart. In this flowchart diagram, it starts with the thermal camera measuring people's temperature, and then the temperature data is controlled and calculated by the mini PC. When the people's temperature exceeds the reference temperature, the universal remote will increase the airflow from the AC. Conversely, when the people's temperature falls below the reference temperature, the universal remote control will decrease the airflow from the AC.
 
 ### General Electrical Architecture
 
 ![img](doc/img/electrical_architecture.png)
 
-This is a simple explanation of the general electrical architecture. i will explain how to wire those three important components
+- This is a simple explanation of the general electrical architecture. i will explain how to wire those three important components
 
 ### General Communication Architecture
-In this section, the communication architecture explains how those three components can comunicate with each other
 
+- In this section, the communication architecture explains how those three components can comunicate with each other
+
+![img](doc/img/communication_architecture.png)
 ---
 
-### Thermal Camera to Raspberry Pi diagram
 
 
 Here is how to wire Thermal Camera to raspberry Pi
