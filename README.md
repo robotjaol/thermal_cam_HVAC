@@ -56,26 +56,7 @@ The trigger diagram is used to generate triggers for the Arduino transmitter to 
 
 ### Component You need it for this Project
 
-#### 1. Mini PC
-- Rasberry 4 RAM 8GB [here](https://shp.ee/sb0f2v0)
-
-#### 2. Thermal Camera
-- InfiRAY T3S [here](https://tokopedia.link/vz7A5uvbfIb)
-
-#### 3. Universal Remote
-- Arduino NANO (3, For Transmission and trigger from Raspberry Pi )
-
-- IR Receiver (A lot)
-
-- IR LED Tactile Button
-
-- 1K Resistor
-
-- 100E Resistor
-
-- Bread Board or PCB
-
-- Cable or Jumper
+follow this link for components [here](https://docs.google.com/spreadsheets/d/1vpriAi5HHOCgwNC7Mt6s1HICf34Qzx8J2fEp0PEnn2U/edit#gid=0)
 
 ## Reference that i collected from internet
 
@@ -110,6 +91,3 @@ The trigger diagram is used to generate triggers for the Arduino transmitter to 
 - website to build universal remote [here](https://www.viralsciencecreativity.com/post/universal-ir-remote-controller)
 
 - Thermal Camera TC100 [here](https://github.com/leswright1977/PyThermalCamera/)
-
-
-### RAB link [here](https://docs.google.com/spreadsheets/d/1vpriAi5HHOCgwNC7Mt6s1HICf34Qzx8J2fEp0PEnn2U/edit#gid=0)
