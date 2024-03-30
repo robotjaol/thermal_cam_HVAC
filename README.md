@@ -49,7 +49,7 @@ In this diagram, I am using an Arduino Nano to retrieve multiple data from vario
 
 In this diagram, I use Arduino to transmit and adjust values back to many devices
 
-#### For Triggered Transfer
+#### For Wiring Universal Remote
 ![Diagram](doc/img/ur_trigger.png)
 
 The trigger diagram is used to generate triggers for the Arduino transmitter to adjust values transmitted to other devices, using RX TX.
