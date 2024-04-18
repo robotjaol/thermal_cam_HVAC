@@ -2,7 +2,7 @@ import os
 import numpy as np
 import cv2
 
-base_dir = 'Computer Vision Projects/Thermal Screening Project/'
+base_dir = '3_test_screening'
 threshold = 200
 area_of_box = 700        # 3000 for img input
 min_temp = 102           # in fahrenheit
