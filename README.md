@@ -1,4 +1,4 @@
-# Thermal Camera HVAC
+# Thermal CCTV HVAC
 
 > PLC SCSL Laboratory Project Base Learning
 
