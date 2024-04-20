@@ -1,6 +1,5 @@
 # Thermal CCTV HVAC
-
-> PLC SCSL Laboratory Project Base Learning
+PLC SCSL Laboratory Project Base Learning
 
 ### General Diagram Plan
 
