@@ -36,7 +36,42 @@ system looks like this
 
 
 
-Here is how to wire Thermal Camera to raspberry Pi
+Here is how to wire Thermal Camera to Mini PC
+
+## Mini PC Comparison Description 
+### Jetson Nano vs Intel NUC i7
+
+This README provides a comparison between Jetson Nano and Intel NUC i7, highlighting their features, advantages, disadvantages, and conclusions.
+
+### Jetson Nano
+
+#### Advantages:
+- Specifically designed for AI and edge computing.
+- Equipped with a powerful NVIDIA GPU for accelerated AI computations.
+- Compact size and energy-efficient.
+- Ideal for computer vision applications, including object detection and thermal analysis.
+
+#### Shortcomings:
+- Limited computing power compared to Intel NUC i7.
+- Lack of official Windows support (though unofficial installation is possible).
+
+### Intel NUC i7
+
+#### Advantages:
+- High performance with Intel Core i7 processor.
+- Official Windows support.
+- Multiple I/O ports for external device connections.
+- Suitable for data processing, server, and thermal analysis applications.
+
+#### Shortcomings:
+- Larger size compared to Jetson Nano.
+- Higher power consumption.
+
+### Conclusion:
+- For those prioritizing high performance and official Windows compatibility, the Intel NUC i7 emerges as the preferred choice.
+- Alternatively, individuals focused on AI edge computing and compact design may find the Jetson Nano more suitable for their needs.
+
+
 ### Universal Remote Control Diagram
 #### For Receiving
 ![Diagram](doc/img/ur_receiver.png)
@@ -55,7 +90,7 @@ The communication diagram is used to generate triggers for the Arduino transmitt
 
 ### Component You need it for this Project
 
-follow this link for components [here](https://docs.google.com/spreadsheets/d/1vpriAi5HHOCgwNC7Mt6s1HICf34Qzx8J2fEp0PEnn2U/edit#gid=0)
+follow this [link for components](https://docs.google.com/spreadsheets/d/1vpriAi5HHOCgwNC7Mt6s1HICf34Qzx8J2fEp0PEnn2U/edit#gid=0)
 
 ### Task 
 
