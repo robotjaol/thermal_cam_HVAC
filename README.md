@@ -92,25 +92,25 @@ The communication diagram is used to generate triggers for the Arduino transmitt
 
 follow this [link for components](https://docs.google.com/spreadsheets/d/1vpriAi5HHOCgwNC7Mt6s1HICf34Qzx8J2fEp0PEnn2U/edit#gid=0)
 
-### Task 
+### Task
 
-- [ ] Cari CCTV dengan capture yang lebih besar dari sebelumnya (PROGRESS)
+- [ ] Find CCTV with larger capture than before (PROGRESS)
    
-- [x] Ubah Diagram ELC dan Communication
+- [x] Modify Electrical and Communication Diagram
 
-- [ ] Comparison JETSON dan NUC [Link Comparison Here](https://docs.google.com/spreadsheets/d/1smyAvMr5_zLs4XbiOqaG5MXrTgi8uHW2DJUwPbSx77A/edit?hl=id#gid=0)
+- [ ] Compare JETSON and NUC [Link Comparison Here](https://docs.google.com/spreadsheets/d/1smyAvMr5_zLs4XbiOqaG5MXrTgi8uHW2DJUwPbSx77A/edit?hl=id#gid=0)
 
 - [ ] Fix UI control Web Stream Lit
 
 - [x] Datasheet Component
 
-- [x] Value IR dan tipe data [HEX]
+- [x] Value of IR and data type [HEX]
 
-- [ ] Komunikasi data hardware (PROGRESS)
+- [ ] Hardware data communication (PROGRESS)
 
 Question (PROGRESS)
 
-- [ ] Kondisi AC on/off jika sudah ada aliran listrik 
+- [ ] AC condition on/off if there is electricity flow
 
 ## Reference that i collected from internet
 
