@@ -57,6 +57,26 @@ The communication diagram is used to generate triggers for the Arduino transmitt
 
 follow this link for components [here](https://docs.google.com/spreadsheets/d/1vpriAi5HHOCgwNC7Mt6s1HICf34Qzx8J2fEp0PEnn2U/edit#gid=0)
 
+### Task 
+
+- [ ] Cari CCTV dengan capture yang lebih besar dari sebelumnya (PROGRESS)
+   
+- [x] Ubah Diagram ELC dan Communication
+
+- [ ] Comparison JETSON dan NUC [Link Comparison Here](https://docs.google.com/spreadsheets/d/1smyAvMr5_zLs4XbiOqaG5MXrTgi8uHW2DJUwPbSx77A/edit?hl=id#gid=0)
+
+- [ ] Fix UI control Web Stream Lit
+
+- [x] Datasheet Component
+
+- [x] Value IR dan tipe data [HEX]
+
+- [ ] Komunikasi data hardware (PROGRESS)
+
+Question (PROGRESS)
+
+- [ ] Kondisi AC on/off jika sudah ada aliran listrik 
+
 ## Reference that i collected from internet
 
 - Thermal camera AMG8833 sensor [here](https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor)
