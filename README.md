@@ -39,9 +39,6 @@ system looks like this
 Here is how to wire Thermal Camera to Mini PC
 
 ## Mini PC Comparison Description 
-### Jetson Nano vs Intel NUC i7
-
-This README provides a comparison between Jetson Nano and Intel NUC i7, highlighting their features, advantages, disadvantages, and conclusions.
 
 ### Jetson Nano
 
