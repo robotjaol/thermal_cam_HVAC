@@ -1,5 +1,6 @@
 # Thermal CCTV HVAC
-PLC SCSL Laboratory Project Base Learning
+
+PLC SCSL Laboratory Project Base Learning [report](https://itsacid-my.sharepoint.com/:w:/g/personal/2040221004_student_its_ac_id/EbupkjB1esBMlMnZHS9zQ2QBUzxRnBv61q4FnL3q58EvzA?e=yw7i2B)
 
 ### General Diagram Plan
 
@@ -31,56 +32,61 @@ system looks like this
 
 - In this section, the communication architecture explains how those three components can comunicate with each other
 
-![img](doc/img/communication_architecture.png)
----
-
-
+## ![img](doc/img/communication_architecture.png)
 
 Here is how to wire Thermal Camera to Mini PC
 
-## Mini PC Comparison Description 
+## Mini PC Comparison Description
 
 ### Jetson Nano
 
 #### Advantages:
+
 - Specifically designed for AI and edge computing.
 - Equipped with a powerful NVIDIA GPU for accelerated AI computations.
 - Compact size and energy-efficient.
 - Ideal for computer vision applications, including object detection and thermal analysis.
 
 #### Shortcomings:
+
 - Limited computing power compared to Intel NUC i7.
 - Lack of official Windows support (though unofficial installation is possible).
 
 ### Intel NUC i7
 
 #### Advantages:
+
 - High performance with Intel Core i7 processor.
 - Official Windows support.
 - Multiple I/O ports for external device connections.
 - Suitable for data processing, server, and thermal analysis applications.
 
 #### Shortcomings:
+
 - Larger size compared to Jetson Nano.
 - Higher power consumption.
 
 ### Conclusion:
+
 - For those prioritizing high performance and official Windows compatibility, the Intel NUC i7 emerges as the preferred choice.
 - Alternatively, individuals focused on AI edge computing and compact design may find the Jetson Nano more suitable for their needs.
 
-
 ### Universal Remote Control Diagram
+
 #### For Receiving
+
 ![Diagram](doc/img/ur_receiver.png)
 
 In this diagram, I am using an Arduino Nano to retrieve multiple data from various devices like AC, TV, and others
 
 #### for Transmission
+
 ![Diagram](doc/img/ur_transmitter.png)
 
 In this diagram, I use Arduino to transmit and adjust values back to many devices
 
 #### For Wiring Mini PC to Universal Remote
+
 ![Diagram](doc/img/ur_trigger.png)
 
 The communication diagram is used to generate triggers for the Arduino transmitter to adjust values transmitted to other devices, using W5500.
@@ -92,7 +98,6 @@ follow this [link for components](https://docs.google.com/spreadsheets/d/1vpriAi
 ### Task
 
 - [ ] Find CCTV with larger capture than before (PROGRESS)
-   
 - [x] Modify Electrical and Communication Diagram
 
 - [ ] Compare JETSON and NUC [Link Comparison Here](https://docs.google.com/spreadsheets/d/1smyAvMr5_zLs4XbiOqaG5MXrTgi8uHW2DJUwPbSx77A/edit?hl=id#gid=0)
