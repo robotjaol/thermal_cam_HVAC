@@ -36,7 +36,39 @@ system looks like this
 
 
 
-Here is how to wire Thermal Camera to raspberry Pi
+Here is how to wire Thermal Camera to Mini PC
+
+## Mini PC Comparison Description 
+
+### Jetson Nano
+
+#### Advantages:
+- Specifically designed for AI and edge computing.
+- Equipped with a powerful NVIDIA GPU for accelerated AI computations.
+- Compact size and energy-efficient.
+- Ideal for computer vision applications, including object detection and thermal analysis.
+
+#### Shortcomings:
+- Limited computing power compared to Intel NUC i7.
+- Lack of official Windows support (though unofficial installation is possible).
+
+### Intel NUC i7
+
+#### Advantages:
+- High performance with Intel Core i7 processor.
+- Official Windows support.
+- Multiple I/O ports for external device connections.
+- Suitable for data processing, server, and thermal analysis applications.
+
+#### Shortcomings:
+- Larger size compared to Jetson Nano.
+- Higher power consumption.
+
+### Conclusion:
+- For those prioritizing high performance and official Windows compatibility, the Intel NUC i7 emerges as the preferred choice.
+- Alternatively, individuals focused on AI edge computing and compact design may find the Jetson Nano more suitable for their needs.
+
+
 ### Universal Remote Control Diagram
 #### For Receiving
 ![Diagram](doc/img/ur_receiver.png)
@@ -55,27 +87,27 @@ The communication diagram is used to generate triggers for the Arduino transmitt
 
 ### Component You need it for this Project
 
-follow this link for components [here](https://docs.google.com/spreadsheets/d/1vpriAi5HHOCgwNC7Mt6s1HICf34Qzx8J2fEp0PEnn2U/edit#gid=0)
+follow this [link for components](https://docs.google.com/spreadsheets/d/1vpriAi5HHOCgwNC7Mt6s1HICf34Qzx8J2fEp0PEnn2U/edit#gid=0)
 
-### Task 
+### Task
 
-- [ ] Cari CCTV dengan capture yang lebih besar dari sebelumnya (PROGRESS)
+- [ ] Find CCTV with larger capture than before (PROGRESS)
    
-- [x] Ubah Diagram ELC dan Communication
+- [x] Modify Electrical and Communication Diagram
 
-- [ ] Comparison JETSON dan NUC [Link Comparison Here](https://docs.google.com/spreadsheets/d/1smyAvMr5_zLs4XbiOqaG5MXrTgi8uHW2DJUwPbSx77A/edit?hl=id#gid=0)
+- [ ] Compare JETSON and NUC [Link Comparison Here](https://docs.google.com/spreadsheets/d/1smyAvMr5_zLs4XbiOqaG5MXrTgi8uHW2DJUwPbSx77A/edit?hl=id#gid=0)
 
 - [ ] Fix UI control Web Stream Lit
 
 - [x] Datasheet Component
 
-- [x] Value IR dan tipe data [HEX]
+- [x] Value of IR and data type [HEX]
 
-- [ ] Komunikasi data hardware (PROGRESS)
+- [ ] Hardware data communication (PROGRESS)
 
 Question (PROGRESS)
 
-- [ ] Kondisi AC on/off jika sudah ada aliran listrik 
+- [ ] AC condition on/off if there is electricity flow
 
 ## Reference that i collected from internet
 
