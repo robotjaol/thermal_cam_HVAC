@@ -116,19 +116,9 @@ Question (PROGRESS)
 
 ## Reference that i collected from internet
 
+### CCTV Thermal Reference
+
 - Thermal camera AMG8833 sensor [here](https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor)
-
-- basic website how2electronics [here](https://how2electronics.com/diy-thermal-camera-with-raspberry-pi-amg8833-sensor/)
-
-- Github reference AMG8833 [here](https://github.com/adafruit/Adafruit_AMG88xx_python)
-
-- Raspberry pi and amg8833 [here](https://how2electronics.com/diy-thermal-camera-with-raspberry-pi-amg8833-sensor/)
-
-- Adafruit AMG8833 [here](https://github.com/adafruit/Adafruit_AMG88xx_python)
-
-- How To Electronics [here](https://www.youtube.com/watch?v=piVV-5RuX2o)
-
-- Usinng AMG8833 [here](https://github.com/makerportal/AMG8833_IR_cam)
 
 - Maker Portal [here](https://github.com/makerportal)
 
@@ -142,8 +132,25 @@ Question (PROGRESS)
 
 - AI Thermometer [here](https://github.com/tomasz-lewicki/ai-thermometer)
 
+- Thermal Camera TC100 [here](https://github.com/leswright1977/PyThermalCamera/)
+
+### Universal Remote Reference
+
 - How to build universal remoe [here](https://www.youtube.com/watch?v=m7z4CU5mw9E)
+
+- Universal remote reference [here](https://ieeexplore.ieee.org/document/8075906)
+
+- IR Remote explanation [link](https://github.com/Arduino-IRremote/Arduino-IRremote)
+
+- controlling AC using ESP32 [here](https://www.makerguides.com/control-air-conditioner-via-ir-with-esp32-esp8266/)
+
+- arduino reference [here](https://www.electronicshub.org/diy-universal-remote-using-arduino/)
+
+
+### Website Project
 
 - website to build universal remote [here](https://www.viralsciencecreativity.com/post/universal-ir-remote-controller)
 
-- Thermal Camera TC100 [here](https://github.com/leswright1977/PyThermalCamera/)
+- Website Python Flask [here](https://pyimagesearch.com/2019/09/02/opencv-stream-video-to-web-browser-html-page/)
+
+- Website Python [Streamlit](https://github.com/petermartens98/Streamlit-OpenCV-Webcam-Display-Web-App)
