@@ -97,7 +97,7 @@ follow this [link for components](https://docs.google.com/spreadsheets/d/1vpriAi
 
 ### Task
 
-- [ ] Find CCTV with larger capture than before (PROGRESS)
+- [x] Find CCTV with larger capture than before (PROGRESS)
 - [x] Modify Electrical and Communication Diagram
 
 - [ ] Compare JETSON and NUC [Link Comparison Here](https://docs.google.com/spreadsheets/d/1smyAvMr5_zLs4XbiOqaG5MXrTgi8uHW2DJUwPbSx77A/edit?hl=id#gid=0)
