@@ -104,7 +104,7 @@ follow this [link for components](https://docs.google.com/spreadsheets/d/1vpriAi
 
 - [ ] Fix UI control Web Stream Lit
 
-- [x] Datasheet Component
+- [x] Datasheet Component (PROGRESS)
 
 - [x] Value of IR and data type [HEX]
 
