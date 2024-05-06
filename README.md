@@ -154,3 +154,7 @@ Question (PROGRESS)
 - Website Python Flask [here](https://pyimagesearch.com/2019/09/02/opencv-stream-video-to-web-browser-html-page/)
 
 - Website Python [Streamlit](https://github.com/petermartens98/Streamlit-OpenCV-Webcam-Display-Web-App)
+
+### Microcontroller to PC communication
+
+- Youtube Tutorial using [W5500](https://www.youtube.com/watch?v=kB0jZ2dh_vA)
