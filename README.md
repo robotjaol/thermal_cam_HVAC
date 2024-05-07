@@ -148,6 +148,8 @@ Question (PROGRESS)
 
 - Compelete hacksterio [here](https://www.hackster.io/sainisagar7294/arduino-based-universal-tv-remote-09af2d)
 
+- Septa reference [here](https://youtu.be/_nm4if-lusI?si=m2NDjdd2vk4Lo-Tv)
+
 ### Website Project
 
 - website to build universal remote [here](https://www.viralsciencecreativity.com/post/universal-ir-remote-controller)
