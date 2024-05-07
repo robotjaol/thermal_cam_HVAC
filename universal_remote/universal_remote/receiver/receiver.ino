@@ -1,6 +1,6 @@
 #include <IRremote.h>
 
-const int RECV_PIN = 8; // DATA IR MASUK PIN 8 
+const int RECV_PIN = 11; // DATA IR MASUK PIN 11
 IRrecv irrecv(RECV_PIN);
 decode_results results;
 
