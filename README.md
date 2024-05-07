@@ -146,6 +146,7 @@ Question (PROGRESS)
 
 - arduino reference [here](https://www.electronicshub.org/diy-universal-remote-using-arduino/)
 
+- Compelete hacksterio [here](https://www.hackster.io/sainisagar7294/arduino-based-universal-tv-remote-09af2d)
 
 ### Website Project
 
