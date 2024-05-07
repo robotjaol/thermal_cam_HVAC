@@ -136,7 +136,7 @@ Question (PROGRESS)
 
 ### Universal Remote Reference
 
-- How to build universal remoe [here](https://www.youtube.com/watch?v=m7z4CU5mw9E)
+- How to build universal remote [here](https://www.youtube.com/watch?v=m7z4CU5mw9E)
 
 - Universal remote reference [here](https://ieeexplore.ieee.org/document/8075906)
 
@@ -146,9 +146,11 @@ Question (PROGRESS)
 
 - arduino reference [here](https://www.electronicshub.org/diy-universal-remote-using-arduino/)
 
-- Compelete hacksterio [here](https://www.hackster.io/sainisagar7294/arduino-based-universal-tv-remote-09af2d)
+- Compeleted hacksterio [here](https://www.hackster.io/sainisagar7294/arduino-based-universal-tv-remote-09af2d)
 
 - Septa reference [here](https://youtu.be/_nm4if-lusI?si=m2NDjdd2vk4Lo-Tv)
+
+- W5500 [library](https://www.arduino.cc/reference/en/libraries/ethernet2/)
 
 ### Website Project
 
