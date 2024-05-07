@@ -1,24 +1,19 @@
 #include <Ethernet2.h>
 #include <SPI.h>
 
-// Define the MAC address and IP address of your Arduino
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
-IPAddress ip(192, 168, 1, 177); // Change to your Arduino's IP address
+IPAddress ip(192, 168, 1, 177); // ESP32/arduino IP
 
-// Define the IP address and port of your mini PC
-IPAddress serverIP(192, 168, 1, 100); // Change to your mini PC's IP address
-int serverPort = 1234; // Change to the port number your mini PC is listening on
+IPAddress serverIP(192, 168, 1, 100); // PC IP
+int serverPort = 1234; //PORT PC
 
 EthernetClient client;
 
 void setup() {
-  // Start the Ethernet connection
   Ethernet.begin(mac, ip);
-
-  // Initialize serial communication for debugging
   Serial.begin(9600);
 
-  // Wait for Ethernet to be ready
+  // Delay ethernet
   delay(1000);
   Serial.println("Ethernet ready");
 
@@ -31,15 +26,12 @@ void setup() {
 }
 
 void loop() {
-  // Send data to the server
   if (client.connected()) {
     client.println("hello world");
-    client.flush(); // Flush the buffer
+    client.flush(); // buffer is empty
     Serial.println("Data sent to server");
   } else {
     Serial.println("Connection lost");
   }
-
-  // Wait for 2 seconds
-  delay(2000);
+  delay(2000); //Transmit setiap 2 detik
 }
