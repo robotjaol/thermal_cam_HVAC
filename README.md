@@ -167,3 +167,5 @@ Question (PROGRESS)
 ### Microcontroller to PC communication
 
 - Youtube Tutorial using [W5500](https://www.youtube.com/watch?v=kB0jZ2dh_vA)
+
+- Website tutorial using [W5500](https://mischianti.org/esp32-ethernet-w5500-with-plain-http-and-ssl-https/) 
