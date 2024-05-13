@@ -38,10 +38,10 @@ void loop() {
     Serial.print(results.decode_type);
     Serial.print(")");
     Serial.println();
-    if (results.value == 0xFF52AD){
+    if (results.value == 0xFF52AD){      //Custom HEX addres
       digitalWrite(ledPin, HIGH);
     }
-    else if (results.value == 0xFF7887){
+    else if (results.value == 0xFF7887){ //Custom HEX addres
       digitalWrite(ledPin, LOW);
     }
     delay(1000);
