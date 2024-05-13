@@ -10,7 +10,7 @@
 //   irrecv.enableIRIn();
 // }
 
-// void loop() {
+// void loop() {o
 //   if (irrecv.decode(&results)) {
 //     Serial.println("Code HEX :" );
 //     Serial.println(results.value, HEX);

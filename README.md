@@ -95,6 +95,18 @@ In this diagram, I use Arduino to transmit and adjust values back to many device
 
 The communication diagram is used to generate triggers for the Arduino transmitter to adjust values transmitted to other devices, using W5500.
 
+#### Alternatif Wiring 
+![img](doc/img/ESP32-W5500.jpg)
+
+| ESP32                              | W5500 |
+|------------------------------------|-------|
+| D5                                 | CS    |
+| D18                                | SCK   |
+| D19                                | MISO  |
+| D23                                | MOSI  |
+| 3.3v (better with external 200mha) | VCC   |
+| GND                                | GND   |
+
 ### Component You need it for this Project
 
 follow this [link for components](https://docs.google.com/spreadsheets/d/1vpriAi5HHOCgwNC7Mt6s1HICf34Qzx8J2fEp0PEnn2U/edit#gid=0)
