@@ -154,7 +154,6 @@ Question (PROGRESS)
 
 - Septa reference [here](https://youtu.be/_nm4if-lusI?si=m2NDjdd2vk4Lo-Tv)
 
-- W5500 [library](https://www.arduino.cc/reference/en/libraries/ethernet2/)
 
 ### Website Project
 
@@ -169,3 +168,8 @@ Question (PROGRESS)
 - Youtube Tutorial using [W5500](https://www.youtube.com/watch?v=kB0jZ2dh_vA)
 
 - Website tutorial using [W5500](https://mischianti.org/esp32-ethernet-w5500-with-plain-http-and-ssl-https/) 
+
+- W5500 [library](https://www.arduino.cc/reference/en/libraries/ethernet2/)
+
+### Exentension Project 
+- Buzzer active [here](https://diyi0t.com/active-passive-buzzer-arduino-esp8266-esp32/)
