@@ -79,6 +79,10 @@ Here is how to wire Thermal Camera to Mini PC
 
 In this diagram, I am using an Arduino Nano to retrieve multiple data from various devices like AC, TV, and others
 
+> if you currently use ESP32 PIN out
+
+![ESP32](doc/img/ESP32.png)
+
 #### for Transmission
 
 ![Diagram](doc/img/ur_transmitter.png)

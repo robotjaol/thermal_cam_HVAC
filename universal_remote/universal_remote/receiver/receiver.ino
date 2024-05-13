@@ -1,17 +1,19 @@
-#include <IRremote.h>
 
-const int RECV_PIN = 11; // DATA IR MASUK PIN 11
-IRrecv irrecv(RECV_PIN);
+#include <IRremoteESP8266.h>
+#include <IRrecv.h>
+
+IRrecv irrecv(15);
 decode_results results;
 
-void setup() {
-  Serial.begin(9600);
-  irrecv.enableIRIn(); // Function untuk running IR read
+void setup(){
+  irrecv.enableIRIn();
+  Serial.begin(115200);
 }
 
-void loop() {
-  if (irrecv.decode(&results)) {
+void loop(){
+  if(irrecv.decode(&results)){
     Serial.println(results.value, HEX);
-    irrecv.resume(); // function menerima data
+    delay(1000);
+    irrecv.resume();
   }
 }
