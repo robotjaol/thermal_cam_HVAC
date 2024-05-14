@@ -28,6 +28,10 @@ def segment_frame(frame):
 # desired_width = 640
 # desired_height = 480
 
+# Testing run di streamlit 
+# st.title("Thermal Video Segmentation")
+# frame_placeholder = st.empty()
+
 while thermalVideo.isOpened():
     ret, frame = thermalVideo.read()
 
@@ -44,4 +48,4 @@ while thermalVideo.isOpened():
         break
 
 thermalVideo.release()
-cv2.destroyAllWindows()
+# cv2.destroyAllWindows()
