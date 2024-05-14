@@ -59,6 +59,7 @@ void loop() {
       Serial.println("Reconnected to server");
     } else {
       Serial.println("Reconnection to server failed");
+      digitalWrite(ledPin, HIGH);
     }
   }
 }
