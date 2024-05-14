@@ -5,7 +5,7 @@ byte mac[] =  { 0xDE, 0xAD, 0xBE, 0xEF, 0xED}; //sesuaikan dengan Mac addres mod
 
 //setting IP server Python laptop
 IPAddress server(192,168,1,10);     //sesuaikan dengan IP laptop
-const uin16_t server_port = 12345;  //samakan dengen port server.py
+const uint16_t server_port = 12345;  //samakan dengen port server.py
 
 EthernetClient client;
 
@@ -32,7 +32,7 @@ void setup(){
 
 void loop(){
   if(client.connected()){
-    if(client.avaible()){
+    if(client.available()){
       String message = client.readStringUntil('\n');
       Serial.println("Message dari server adalah : " + message);
     }
