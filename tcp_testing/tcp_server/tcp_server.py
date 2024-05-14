@@ -20,5 +20,3 @@ while True:
     client_socket.close() #tutup koneksi dengan client
 
 
-
-

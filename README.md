@@ -109,6 +109,11 @@ Pin communication wiring
 | 3.3v (better with external 200mha) | VCC   |
 | GND                                | GND   |
 
+## Setting IP
+> sudo ip addr add 192.168.1.100/24 dev eno1
+> sudo ip link set eno1 up
+
+
 ### Component You need it for this Project
 
 follow this [link for components](https://docs.google.com/spreadsheets/d/1vpriAi5HHOCgwNC7Mt6s1HICf34Qzx8J2fEp0PEnn2U/edit#gid=0)

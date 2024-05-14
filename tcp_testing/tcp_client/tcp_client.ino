@@ -5,7 +5,7 @@
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
 // Setting IP server Python laptop
-IPAddress server(192, 168, 1, 100); // Sesuaikan dengan IP laptop 
+IPAddress server(192,168,1,100); // Sesuaikan dengan IP laptop 
 const uint16_t server_port = 12345; // Samakan dengan port server.py
 
 EthernetClient client;
