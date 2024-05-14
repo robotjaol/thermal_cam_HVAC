@@ -5,12 +5,18 @@
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
 // Setting IP server Python laptop
-IPAddress server(127,0,0,1); // Sesuaikan dengan IP laptop Anda
+IPAddress server(192, 168, 1, 100); // Sesuaikan dengan IP laptop 
 const uint16_t server_port = 12345; // Samakan dengan port server.py
 
 EthernetClient client;
 
+const int ledPin = 2;
+
 void setup() {
+  // Set LED pin sebagai output
+  pinMode(ledPin, OUTPUT);
+  digitalWrite(ledPin, LOW); // Matikan LED pada awalnya
+
   // Mulai komunikasi serial untuk debugging
   Serial.begin(115200);
 
@@ -18,7 +24,7 @@ void setup() {
   if (Ethernet.begin(mac) == 0) {
     Serial.println("Failed to configure Ethernet using DHCP");
     // Berikan IP address statis jika DHCP gagal
-    Ethernet.begin(mac, IPAddress(192, 168, 1, 177));
+    Ethernet.begin(mac, IPAddress(192, 168, 1, 177)); // Sesuaikan dengan jaringan Anda
   }
 
   // Beri waktu untuk memulai koneksi Ethernet
@@ -39,6 +45,9 @@ void loop() {
     if (client.available()) {
       String message = client.readStringUntil('\n');
       Serial.println("Message dari server adalah: " + message);
+
+      // Berikan indikator pada hardware
+      blink_led();
     }
   } else {
     // Jika kondisi sudah connect tapi tiba-tiba sinyal terputus
@@ -52,4 +61,12 @@ void loop() {
       Serial.println("Reconnection to server failed");
     }
   }
+}
+
+// Function indikator hardware
+void blink_led() {
+  digitalWrite(ledPin, HIGH); 
+  delay(500);
+  digitalWrite(ledPin, LOW);  
+  delay(500);
 }
