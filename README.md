@@ -121,18 +121,23 @@ follow this [link for components](https://docs.google.com/spreadsheets/d/1vpriAi
 
 ### Task
 
-- [x] Find CCTV with larger capture than before (PROGRESS)
+- [x] industrial CCTV thermal
+      
 - [x] Modify Electrical and Communication Diagram
+
+- [ ] State Control System Projcet
+
+- [ ] State control System Data transmission
 
 - [ ] Compare JETSON and NUC [Link Comparison Here](https://docs.google.com/spreadsheets/d/1smyAvMr5_zLs4XbiOqaG5MXrTgi8uHW2DJUwPbSx77A/edit?hl=id#gid=0)
 
-- [ ] Fix UI control Web Stream Lit
+- [ ] Fix UI control React x Flask x YOLO
 
-- [x] Datasheet Component (PROGRESS)
+- [x] Client Server via TCP
 
-- [x] Value of IR and data type [HEX]
+- [x] Value of IR AC [HEX]
 
-- [ ] Hardware data communication (PROGRESS)
+- [X] Hardware data communication 
 
 Question (PROGRESS)
 
