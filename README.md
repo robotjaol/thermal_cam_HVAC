@@ -110,8 +110,9 @@ Pin communication wiring
 | GND                                | GND   |
 
 ## Setting IP
-> sudo ip addr add 192.168.1.100/24 dev eno1
-> sudo ip link set eno1 up
+ sudo ip addr add 192.168.1.100/24 dev eno1
+
+ sudo ip link set eno1 up
 
 
 ### Component You need it for this Project
