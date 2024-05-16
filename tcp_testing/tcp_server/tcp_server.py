@@ -33,7 +33,7 @@ import socket
 
 # Set up server
 server_ip = "192.168.1.100"  # Ganti dengan alamat IP server Anda
-server_port = 12345  # Ganti dengan port server Anda
+server_port = 1111  # Ganti dengan port server Anda
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((server_ip, server_port))
