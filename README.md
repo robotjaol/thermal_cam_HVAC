@@ -143,6 +143,9 @@ and tes using
 
 - ifconfig
 
+#### UI Design Using [FIGMA](https://www.figma.com/design/DCSB3zFSsHpKcY1Yvd0YkH/Sleek-Dashboard-Designs-for-Data-Visualization-(Community)?node-id=0%3A1&t=oCMZaYk64a3BVMk9-1)
+
+To Build This website i Currently Use HTML, SCSS
 
 ### Component You need it for this Project
 
