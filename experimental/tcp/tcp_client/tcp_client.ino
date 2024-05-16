@@ -173,7 +173,7 @@ void loop() {
 
 void connectToServer() {
   Serial.println("Menghubungkan ke server...");
-  if (client.connect(IPAddress(192, 168, 1, 100), 1111)) {
+  if (client.connect(IPAddress(192, 168, 1, 100), 8888)) {
     Serial.println("Terhubung ke server");
     blink_led();
   } else {
