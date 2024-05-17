@@ -1,33 +1,33 @@
-import socket
+# import socket
 
-server_ip = "192.168.1.100"
-server_port = 8899
+# server_ip = "192.168.1.100"
+# server_port = 8899
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind((server_ip, server_port))
-server.listen(5)
+# server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# server.bind((server_ip, server_port))
+# server.listen(5)
 
-print(f"Running server :{server_ip}:{server_port}")
+# print(f"Running server :{server_ip}:{server_port}")
 
-try:
-    while True:
-        client_socket, client_address = server.accept()
-        print(f"Koneksi address {client_address} Alhamdullilah wis Connect Bos")
+# try:
+#     while True:
+#         client_socket, client_address = server.accept()
+#         print(f"Koneksi address {client_address} Alhamdullilah wis Connect Bos")
 
-        try:
-            command = "LED_ON\n"
-            client_socket.sendall(command.encode())
-            response = client_socket.recv(1024).decode()
-            print(f"Respons dari klien: {response}")
+#         try:
+#             command = "LED_ON\n"
+#             client_socket.sendall(command.encode())
+#             response = client_socket.recv(1024).decode()
+#             print(f"Respons dari klien: {response}")
 
-        except Exception as e:
-            print(f"Error selama komunikasi: {e}")
-        finally:
-            client_socket.close()
-            print("Koneksi ditutup")
+#         except Exception as e:
+#             print(f"Error selama komunikasi: {e}")
+#         finally:
+#             client_socket.close()
+#             print("Koneksi ditutup")
 
-finally:
-    server.close()
+# finally:
+#     server.close()
 
 
 # TES KIRIM SESUAL PBL 
@@ -49,35 +49,70 @@ finally:
 #         print(f"Koneksi address {client_address} Alhamdullilah wis Connect Bos")
 
 #         try:
-#             command = "ON_AC1\n"
+#             command = "1\n"
 #             client_socket.sendall(command.encode())
 #             response = client_socket.recv(1024).decode()
 #             print(f"Respons dari klien: {response}")
 
 #             time.sleep(2)
 
-#             command = "OFF_AC1\n"
+#             command = "2\n"
 #             client_socket.sendall(command.encode())
 #             response = client_socket.recv(1024).decode()
 #             print(f"Respons dari klien: {response}")
 
-#             command = "ON_AC2\n"
+#             command = "3\n"
 #             client_socket.sendall(command.encode())
 #             response = client_socket.recv(1024).decode()
 #             print(f"Respons dari klien: {response}")
 
 #             time.sleep(2)
 
-#             command = "OFF_AC2\n"
+#             command = "4\n"
 #             client_socket.sendall(command.encode())
 #             response = client_socket.recv(1024).decode()
 #             print(f"Respons dari klien: {response}")
 
 #         except Exception as e:
 #             print(f"Error selama komunikasi: {e}")
-#         finally:
-#             client_socket.close()
-#             print("Koneksi ditutup")
+#         # finally:
+#         #     client_socket.close()
+#         #     print("Koneksi ditutup")
 
 # finally:
 #     server.close()
+
+
+import socket
+import time
+
+server_ip = "192.168.1.100"
+server_port = 8899
+
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server.bind((server_ip, server_port))
+server.listen(5)
+
+print(f"Running server :{server_ip}:{server_port}")
+
+try:
+    while True:
+        client_socket, client_address = server.accept()
+        print(f"Koneksi address {client_address} Alhamdullilah wis Connect Bos")
+
+        try:
+            for command in ["1\n", "2\n", "3\n", "4\n"]:
+                client_socket.sendall(command.encode())
+                response = client_socket.recv(1024).decode()
+                print(f"Respons dari klien: {response}")
+                time.sleep(2)  
+
+        except Exception as e:
+            print(f"Error selama komunikasi: {e}")
+        finally:
+            client_socket.close()
+            print("Data telah ditransmisikan")
+
+finally:
+    server.close()
+
