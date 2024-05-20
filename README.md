@@ -157,13 +157,7 @@ follow this [link for components](https://docs.google.com/spreadsheets/d/1vpriAi
 
 - [x] Modify Electrical and Communication Diagram
 
-- [ ] State Control System Projcet
-
-- [ ] State control System Data transmission
-
-- [ ] Compare JETSON and NUC [Link Comparison Here](https://docs.google.com/spreadsheets/d/1smyAvMr5_zLs4XbiOqaG5MXrTgi8uHW2DJUwPbSx77A/edit?hl=id#gid=0)
-
-- [x] Fix Web App x Python Server x ESP32 Client
+- [x] Vision Web App x Python Server x ESP32 Client
 
 - [x] Client Server via TCP
 
@@ -171,7 +165,13 @@ follow this [link for components](https://docs.google.com/spreadsheets/d/1vpriAi
 
 - [X] Hardware data communication
 
-- [ ] YOLO integration tests
+- [ ] State Control System Projcet
+
+- [ ] State control System Data transmission
+
+- [ ] Compare JETSON and NUC [Link Comparison Here](https://docs.google.com/spreadsheets/d/1smyAvMr5_zLs4XbiOqaG5MXrTgi8uHW2DJUwPbSx77A/edit?hl=id#gid=0)
+
+- [ ] YOLOv5 integration tests
 
 - [ ] Web interface Design
 
