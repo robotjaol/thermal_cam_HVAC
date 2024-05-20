@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Webcam Feed</title>
+</head>
+<body>
+    <h1>Live Webcam Feed</h1>
+    <img id="video_feed" src="{{ url_for('video_feed') }}" width="640" height="480" style="border: 1px solid black;">
+    <p id="num_people">Jumlah Orang: </p>
+
+    <script>
+        // Mengambil data jumlah orang dari server dan menampilkan di halaman web
+        const eventSource = new EventSource("/video_feed");
+        eventSource.onmessage = (event) => {
+            document.getElementById('num_people').innerText = `Jumlah Orang: ${event.data}`;
+        };
+    </script>
+</body>
+</html>
