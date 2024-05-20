@@ -100,9 +100,9 @@ void receivePeopleCount() {
       // Skip frame data
       return;
     } else {
-      Serial.println("Jumlah orang dari Vision: " + count);
+      Serial.println("Vision Detected: " + count + " people");
       // Kirimkan konfirmasi ke server
-      client.print("jon\n");
+      client.print("jon");
     }
   }
 }
