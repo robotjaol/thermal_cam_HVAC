@@ -17,7 +17,9 @@ def run_client():
             else:
                 try:
                     num_faces = int(data.strip())
-                    print(f"Number of faces detected: {num_faces}")
+                    print(f"Faces detected: {num_faces}")
+                    # Kirimkan konfirmasi ke server
+                    client.sendall("jon".encode())
                 except ValueError:
                     print(f"Received invalid data: {data}")
             time.sleep(1)  # Menambahkan jeda selama 1 detik
@@ -28,6 +30,37 @@ def run_client():
 
 if __name__ == '__main__':
     run_client()
+
+# import socket
+# import time
+
+# # server_ip = "192.168.1.100"   #connect with router/etherner/W5500
+# server_ip = "127.0.0.1"         #connect with IP computer 
+# server_port = 8899
+
+# def run_client():
+#     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#     client.connect((server_ip, server_port))
+
+#     try:
+#         while True:
+#             data = client.recv(1024).decode()
+#             if data.startswith('--frame'):
+#                 continue
+#             else:
+#                 try:
+#                     num_faces = int(data.strip())
+#                     print(f"Number of faces detected: {num_faces}")
+#                 except ValueError:
+#                     print(f"Received invalid data: {data}")
+#             time.sleep(1)  # Menambahkan jeda selama 1 detik
+#     except Exception as e:
+#         print(f"Error receiving data: {e}")
+#     finally:
+#         client.close()
+
+# if __name__ == '__main__':
+#     run_client()
 
 
 

@@ -78,6 +78,12 @@ def run_socket_server():
                     _, num_faces = detect_faces(frame)
                     client_socket.sendall(str(num_faces).encode() + b'\n')
                     time.sleep(1)
+                    
+                    # Tunggu respons dari klien
+                    response = client_socket.recv(1024).decode()
+                    if response == "jon":
+                        print("Data Transmission Success")
+
                     # Uncomment the following lines to enable IR and LED commands
                     # transmit_ir(client_socket)
                     # server_led(client_socket)
@@ -94,6 +100,7 @@ if __name__ == '__main__':
     flask_thread = threading.Thread(target=run_flask_app)
     flask_thread.start()
     run_socket_server()
+
 
 
 #-----------------------------------------------------------

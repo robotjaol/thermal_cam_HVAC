@@ -10,7 +10,7 @@
 const int buttonWIND  = 27; // WIND/BLOWER
 const int buttonMINUS = 26; // MINUS THERMAL
 const int buttonPLUS = 25;  // PLUS THERMAL
-const int buttonONOFF = 33;   // ON/OFF REMOTE
+const int buttonONOFF = 33; // ON/OFF REMOTE
 const int ledPin = 2;       // LED ESP32
 const int ledBox = 12;      // LED BOX UNIVERSAL REMOTE
 const int buzzer = 14;      // BUZZER REMOTE BOX
@@ -101,6 +101,8 @@ void receivePeopleCount() {
       return;
     } else {
       Serial.println("Jumlah orang dari Vision: " + count);
+      // Kirimkan konfirmasi ke server
+      client.print("jon\n");
     }
   }
 }
@@ -138,4 +140,5 @@ void serverLed(){
     }
   }
 }
+
 
