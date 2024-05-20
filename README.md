@@ -154,7 +154,7 @@ follow this [link for components](https://docs.google.com/spreadsheets/d/1vpriAi
 ### Task
 
 - [x] industrial CCTV thermal
-      
+
 - [x] Modify Electrical and Communication Diagram
 
 - [ ] State Control System Projcet
@@ -163,13 +163,17 @@ follow this [link for components](https://docs.google.com/spreadsheets/d/1vpriAi
 
 - [ ] Compare JETSON and NUC [Link Comparison Here](https://docs.google.com/spreadsheets/d/1smyAvMr5_zLs4XbiOqaG5MXrTgi8uHW2DJUwPbSx77A/edit?hl=id#gid=0)
 
-- [ ] Fix UI control React x Flask x YOLO
+- [x] Fix Web App x Python Server x ESP32 Client
 
 - [x] Client Server via TCP
 
 - [x] Value of IR AC [HEX]
 
-- [X] Hardware data communication 
+- [X] Hardware data communication
+
+- [ ] YOLO integration tests
+
+- [ ] Web interface Design
 
 Question (PROGRESS)
 
