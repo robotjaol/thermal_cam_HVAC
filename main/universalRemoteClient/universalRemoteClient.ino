@@ -4,32 +4,22 @@
 
 #include <SPI.h>
 #include <Ethernet.h>
-#include <IRremote.h>
 
-// SETUP PIN IR COMMUNICATION
-const int irTran = 4;  // IR TRANSMISSION PIN
-const int irRecv = 13; // IR RECEIVE TO COLLECT HEX CODE
+//--------- REMOTE SETUP PIN --------------
+//-------- SETUP BUTTON REMOTE ------------
+const int buttonWIND  = 27; // WIND/BLOWER
+const int buttonMINUS = 26; // MINUS THERMAL
+const int buttonPLUS = 25;  // PLUS THERMAL
+const int buttonONOFF = 33;   // ON/OFF REMOTE
+const int ledPin = 2;       // LED ESP32
+const int ledBox = 12;      // LED BOX UNIVERSAL REMOTE
+const int buzzer = 14;      // BUZZER REMOTE BOX
 
-// SETUP BUTTON MODE
-const int buttonRecv  = 27; // RECEIVE HEX CODE MODE
-const int buttonTrans = 26; // TRANSMISSION HEX CODE MODE
-const int buttonManual = 25; // MODE MANUAL UNIVERSAL REMOTE
-
-// SETUP PIN W5500
+//------------ SETUP PIN W5500 ------------
 #define SPI_MISO 19
 #define SPI_MOSI 23
 #define SPI_SCK 18
 #define SPI_CS 5
-
-// SETUP PIN INDIKATOR 
-const int ledPin = 2;   // LED ESP32
-const int ledBox = 12;  // LED BOX UNIVERSAL REMOTE
-const int buzzer = 14;  // BUZZER BOX
-
-// MODE
-bool irReceiverMode = false;
-bool irTransmitterMode = false;
-bool manual = false;
 
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED }; // DEFAULT MAC ADDRESS
 
@@ -40,11 +30,6 @@ IPAddress gateway(192, 168, 1, 1);
 IPAddress subnet(255, 255, 255, 0);
 
 EthernetClient client;
-
-// IR declaration
-IRrecv irReceiver(irRecv);
-IRsend irSender;
-
 
 // --------- SETUP PIN AND COMMUNICATION TESTING-------------
 
@@ -70,13 +55,14 @@ void setup() {
   // LED pin mode
   pinMode(ledPin, OUTPUT);
   digitalWrite(ledPin, LOW);
-
+  
+  pinMode(buzzer, OUTPUT);
+  pinMode(ledBox, OUTPUT);
   // Button pin mode
-  pinMode(buttonRecv, INPUT_PULLUP);
-  pinMode(buttonTrans, INPUT_PULLUP);
-  pinMode(buttonManual, INPUT_PULLUP);
-
-  irReceiver.enableIRIn(); // Enable IR receive mode
+  pinMode(buttonONOFF, OUTPUT);
+  pinMode(buttonPLUS, OUTPUT);
+  pinMode(buttonMINUS, OUTPUT);
+  pinMode(buttonWIND, OUTPUT);
 
   connectToServer(); // Connect to server during setup
 }
@@ -89,7 +75,7 @@ void loop() {
   } else {
     connectToServer();      // Reconnect to server if disconnected
   }
-  delay(100);               // Delay main loop program
+  delay(1000);               // Delay main loop program by 1 second
 }
 
 
@@ -98,7 +84,7 @@ void loop() {
 // Function to connect to server
 void connectToServer() { 
   Serial.println("Menghubungkan ke server...");
-  if (client.connect(IPAddress(192, 168, 1, 100), 8899)) {
+  if (client.connect(IPAddress(192, 168, 1, 100), 8899)) { // IP ETHERNET W5500 
     Serial.println("Terhubung ke server");
   } else {
     Serial.println("Gagal terhubung ke server");
@@ -109,15 +95,19 @@ void connectToServer() {
 // Function to receive the count of people from the server
 void receivePeopleCount() {
   if (client.connected() && client.available()) {
-    String Count = client.readStringUntil('\n');
-    Serial.println("Jumlah orang dari server: " + Count);
+    String count = client.readStringUntil('\n');
+    if (count.startsWith("--frame")) {
+      // Skip frame data
+      return;
+    } else {
+      Serial.println("Jumlah orang dari Vision: " + count);
+    }
   }
 }
 
 // Function to blink the LED on the ESP32
 void blinkLed(){
-  for (int i = 0; i < 10000; i++)
-  {
+  for (int i = 0; i < 10; i++) {
     digitalWrite(ledPin, HIGH);
     delay(100);
     digitalWrite(ledPin, LOW);
@@ -140,12 +130,12 @@ void serverLed(){
     Serial.println("Terputus dari server");
     delay(1000);
     connectToServer();  
-    for(int k = 0; k<10; k++){
+    for(int k = 0; k < 10; k++) {
       digitalWrite(ledPin, HIGH);
       delay(100);
       digitalWrite(ledPin, LOW);
       delay(100);
     }
   }
-  delay(100);
 }
+
