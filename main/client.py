@@ -17,7 +17,7 @@ def run_client():
             else:
                 try:
                     num_faces = int(data.strip())
-                    print(f"Faces detected: {num_faces}")
+                    print(f"People detected: {num_faces}")
                     # Kirimkan konfirmasi ke server
                     client.sendall("jon".encode())
                 except ValueError:
