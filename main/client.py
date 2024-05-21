@@ -2,7 +2,7 @@ import socket
 import time
 
 # server_ip = "192.168.1.100"   #connect with router/etherner/W5500
-server_ip = "127.0.0.1"         #connect with IP computer 
+server_ip = "127.0.0.1"         #connect with IP computer
 server_port = 8899
 
 def run_client():
@@ -16,20 +16,26 @@ def run_client():
                 continue
             else:
                 try:
-                    num_faces = int(data.strip())
-                    print(f"People detected: {num_faces}")
+                    # Memisahkan jumlah orang dan suhu rata-rata dari data yang diterima
+                    num_people, avg_temp = map(float, data.split(','))
+                    print(f"Jumlah orang: {int(num_people)}")
+                    print(f"Suhu rata-rata: {avg_temp:.2f} C")
                     # Kirimkan konfirmasi ke server
                     client.sendall("jon".encode())
                 except ValueError:
                     print(f"Received invalid data: {data}")
             time.sleep(1)  # Menambahkan jeda selama 1 detik
+    except ConnectionError as ce:
+        print(f"Connection error: {ce}")
     except Exception as e:
-        print(f"Error receiving data: {e}")
+        print(f"Error: {e}")
     finally:
         client.close()
 
 if __name__ == '__main__':
     run_client()
+
+
 
 # import socket
 # import time
