@@ -6,9 +6,9 @@ import cv2
 import torch
 import numpy as np
 
-# server_ip = "192.168.1.100"   #connect with IP router
-server_ip = "127.0.0.1"     #connect with IP computer
-server_port = 8899
+server_ip = "192.168.1.100"   #connect with IP router
+# server_ip = "127.0.0.1"     # Connect with IP computer
+server_port = 8899          # PORT TRANSMISI
 
 app = Flask(__name__)
 
@@ -17,7 +17,7 @@ thermal_video_capture = cv2.VideoCapture(thermal_video_path)
 
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
-# Initial calibration offset
+# Initial calibration offset manual
 calibration_offset = -77
 
 #FUNCTION START

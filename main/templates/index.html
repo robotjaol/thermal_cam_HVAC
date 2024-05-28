@@ -1,80 +1,42 @@
+<!-- ONLY PATH THERMAL  -->
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCTV Thermal HVAC</title>
-    <style>
-        #video-container {
-            text-align: center;
-        }
-        #video-feed {
-            width: 100%;
-            max-width: 800px;
-        }
-        #controls {
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div id="video-container">
-        <h1>Video Thermal</h1>
-        <img id="video-feed" src="{{ url_for('video_feed') }}" />
-        <div id="controls">
-            <label for="calibration-offset">Calibration Offset:</label>
-            <input type="number" id="calibration-offset" step="0.1" />
-            <button onclick="calibrate()">Calibrate</button>
-            <button onclick="toggleOff()">Turn Off</button>
-        </div>
-    </div>
-    <script>
-        function calibrate() {
-            const offset = document.getElementById("calibration-offset").value;
-            fetch("/calibrate", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ offset: parseFloat(offset) })
-            }).then(response => {
-                if (response.ok) {
-                    console.log("Calibration updated successfully.");
-                } else {
-                    console.error("Failed to update calibration.");
-                }
-            });
-        }
-
-        function toggleOff() {
-            fetch("/toggle_off", {
-                method: "POST"
-            }).then(response => {
-                if (response.ok) {
-                    console.log("Server turned off.");
-                } else {
-                    console.error("Failed to turn off server.");
-                }
-            });
-        }
-    </script>
-</body>
-</html>
-
-
-
-<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CCTV Thermal HVAC</title>
+  </head>
+  <body>
+    <div id="video-container">
+      <h1>Video Thermal</h1>
+      <img id="video-feed" src="{{ url_for('video_feed') }}" />
+      <div id="controls">
+        <label for="calibration-offset">Calibration Offset:</label>
+        <input type="number" id="calibration-offset" step="0.1" />
+        <button onclick="calibrate()">Calibrate</button>
+        <button onclick="toggleOff()">Turn Off</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- WEBCAM THERMAL YOLO MASUK -->
+
+<!-- <!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8" />
+    <meta name    = "viewport" content = "width=device-width, initial-scale=1.0" />
     <title>CCTV Thermal HVAC</title>
     <style>
       #video-container {
         text-align: center;
       }
       #video-feed {
-        width: 100%;
+        width    : 100%;
         max-width: 800px;
       }
       #controls {
@@ -83,13 +45,13 @@
     </style>
   </head>
   <body>
-    <div id="video-container">
+    <div id = "video-container">
       <h1>Video Stream</h1>
-      <img id="video-feed" src="{{ url_for('video_feed') }}" />
-      <div id="controls">
-        <button onclick="toggleVideo('webcam')">Webcam</button>
-        <button onclick="toggleVideo('thermal')">Thermal</button>
-        <button onclick="toggleOff()">Turn Off</button>
+      <img    id      = "video-feed" src = "{{ url_for('video_feed') }}" />
+      <div    id      = "controls">
+      <button onclick = "toggleVideo('webcam')">Webcam</button>
+      <button onclick = "toggleVideo('thermal')">Thermal</button>
+      <button onclick = "toggleOff()">Turn Off</button>
       </div>
     </div>
     <script>
@@ -98,7 +60,7 @@
         formData.append("video_source", source);
         fetch("/toggle_video", {
           method: "POST",
-          body: formData,
+          body  : formData,
         }).then((response) => {
           if (response.ok) {
             console.log(`${source} video source selected.`);
@@ -125,33 +87,33 @@
 
 <!-- YOLO DAN WEBCAM -->
 <!-- <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset = "UTF-8">
+    <meta name    = "viewport" content = "width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel = "stylesheet" href = "style.css">
 
     <title>USER INTERFACE</title>
 
 </head>
 <body>
     <h1> Video Capture </h1>
-    <div class="video-container">
-        <img src="{{ url_for('video_feed') }}" width="800">
+    <div class = "video-container">
+    <img src   = "{{ url_for('video_feed') }}" width = "800">
     </div>
 </body>
 </html> -->
 
 <!-- VIDIO THERMAL ONLY -->
 <!-- <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset = "UTF-8">
     <title>Video Feed</title>
 </head>
 <body>
     <h1>Video Stream</h1>
-    <img src="{{ url_for('video_feed') }}" width="80%">
+    <img src = "{{ url_for('video_feed') }}" width = "80%">
 </body>
 </html> -->

@@ -47,7 +47,7 @@ void receivePeopleCount() {
       // Skip frame data
       return;
     } else {
-      Serial.println("Vision Detected: " + count + " people");
+      Serial.println("Detect People: " + count + " C");
       // Kirimkan konfirmasi ke server
       client.print("jon");
     }
@@ -59,7 +59,7 @@ void blinkLed(){
   for (int i = 0; i < 10; i++) {
     digitalWrite(ledPin, HIGH);
     delay(100);
-    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin, HIGH);
     delay(100);  
   }
 }
@@ -82,10 +82,36 @@ void serverLed(){
     for(int k = 0; k < 10; k++) {
       digitalWrite(ledPin, HIGH);
       delay(100);
-      digitalWrite(ledPin, LOW);
+      digitalWrite(ledPin, HIGH);
       delay(100);
     }
   }
+}
+
+void triggerManual(){
+  digitalWrite(buttonONOFF, HIGH);
+  delay(2000);
+  digitalWrite(buttonPLUS, HIGH);
+  delay(2000);
+  digitalWrite(buttonPLUS, HIGH);
+  delay(2000);
+  digitalWrite(buttonPLUS, HIGH);
+  delay(2000);
+  digitalWrite(buttonPLUS, HIGH);
+  delay(2000);
+  digitalWrite(buttonPLUS, HIGH);
+  delay(2000);
+  digitalWrite(buttonMINUS, HIGH);
+  delay(2000);
+  digitalWrite(buttonMINUS, HIGH);
+  delay(2000);
+  digitalWrite(buttonMINUS, HIGH);
+  delay(2000);
+  digitalWrite(buttonMINUS, HIGH);
+  delay(2000);
+  digitalWrite(buttonMINUS, HIGH);
+  delay(2000);
+  digitalWrite(buttonONOFF, HIGH);
 }
 
 // --------- SETUP PIN AND COMMUNICATION TESTING-------------
@@ -111,10 +137,12 @@ void setup() {
 
   // LED pin mode
   pinMode(ledPin, OUTPUT);
-  digitalWrite(ledPin, LOW);
+  digitalWrite(ledPin, HIGH);
   
+  //Box Indicator
   pinMode(buzzer, OUTPUT);
   pinMode(ledBox, OUTPUT);
+  
   // Button pin mode
   pinMode(buttonONOFF, OUTPUT);
   pinMode(buttonPLUS, OUTPUT);
@@ -133,5 +161,7 @@ void loop() {
     connectToServer();      // Reconnect to server if disconnected
   }
   delay(1000);               // Delay main loop program by 1 second
+
+  // triggerManual();
 }
 
