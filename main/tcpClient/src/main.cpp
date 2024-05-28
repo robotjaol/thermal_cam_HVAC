@@ -35,16 +35,15 @@ void connectToServer() {
     Serial.println("Terhubung ke server");
   } else {
     Serial.println("Gagal terhubung ke server");
-    delay(500); // Wait before retrying connection
+    delay(500);
   }
 }
 
-// Function to receive the count of people from the server
+// Function to receive the count of people
 void receivePeopleCount() {
   if (client.connected() && client.available()) {
     String count = client.readStringUntil('\n');
     if (count.startsWith("--frame")) {
-      // Skip frame data
       return;
     } else {
       Serial.println("Detect People: " + count + " C");
