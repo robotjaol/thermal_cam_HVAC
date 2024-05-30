@@ -98,6 +98,9 @@ The communication diagram is used to generate triggers for the Arduino transmitt
 #### Alternatif Wiring 
 ![img](doc/img/ESP32-W5500.jpg)
 
+### Full Components 
+![img](doc/img/skematik.jpg)
+
 Pin communication wiring 
 
 | ESP32                              | W5500 |

@@ -87,35 +87,17 @@ void serverLed(){
   }
 }
 
-void triggerManual(){
-  digitalWrite(buttonONOFF, HIGH);
-  delay(2000);
-  digitalWrite(buttonPLUS, HIGH);
-  delay(2000);
-  digitalWrite(buttonPLUS, HIGH);
-  delay(2000);
-  digitalWrite(buttonPLUS, HIGH);
-  delay(2000);
-  digitalWrite(buttonPLUS, HIGH);
-  delay(2000);
-  digitalWrite(buttonPLUS, HIGH);
-  delay(2000);
-  digitalWrite(buttonMINUS, HIGH);
-  delay(2000);
-  digitalWrite(buttonMINUS, HIGH);
-  delay(2000);
-  digitalWrite(buttonMINUS, HIGH);
-  delay(2000);
-  digitalWrite(buttonMINUS, HIGH);
-  delay(2000);
-  digitalWrite(buttonMINUS, HIGH);
-  delay(2000);
-  digitalWrite(buttonONOFF, HIGH);
-}
-
 // --------- SETUP PIN AND COMMUNICATION TESTING-------------
 
 void setup() {
+  // LED pin mode
+  pinMode(ledPin, OUTPUT);
+  digitalWrite(ledPin, HIGH);
+  
+  //Box Indicator
+  pinMode(buzzer, OUTPUT);
+  pinMode(ledBox, OUTPUT);
+
   Serial.begin(115200);  // Setting baud rate
   SPI.begin(SPI_SCK, SPI_MISO, SPI_MOSI, SPI_CS); // Initialize SPI
   
@@ -134,19 +116,12 @@ void setup() {
     while (true); // Stop execution if Ethernet configuration fails
   }
 
-  // LED pin mode
-  pinMode(ledPin, OUTPUT);
-  digitalWrite(ledPin, HIGH);
-  
-  //Box Indicator
-  pinMode(buzzer, OUTPUT);
-  pinMode(ledBox, OUTPUT);
   
   // Button pin mode
-  pinMode(buttonONOFF, OUTPUT);
-  pinMode(buttonPLUS, OUTPUT);
-  pinMode(buttonMINUS, OUTPUT);
-  pinMode(buttonWIND, OUTPUT);
+  // pinMode(buttonONOFF, OUTPUT);
+  // pinMode(buttonPLUS, OUTPUT);
+  // pinMode(buttonMINUS, OUTPUT);
+  // pinMode(buttonWIND, OUTPUT);
 
   connectToServer(); // Connect to server during setup
 }
@@ -160,7 +135,5 @@ void loop() {
     connectToServer();      // Reconnect to server if disconnected
   }
   delay(1000);               // Delay main loop program by 1 second
-
-  // triggerManual();
 }
 
