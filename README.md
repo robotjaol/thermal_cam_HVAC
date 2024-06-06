@@ -1,6 +1,9 @@
 # Thermal CCTV HVAC
 
-PLC SCSL Laboratory Project Base Learning [report](https://itsacid-my.sharepoint.com/:w:/g/personal/2040221004_student_its_ac_id/EbupkjB1esBMlMnZHS9zQ2QBUzxRnBv61q4FnL3q58EvzA?e=yw7i2B)
+## Proposal And Drive Documentation
+**PLC SCSL Laboratory Project Base Learning [report](https://itsacid-my.sharepoint.com/:w:/g/personal/2040221004_student_its_ac_id/EbupkjB1esBMlMnZHS9zQ2QBUzxRnBv61q4FnL3q58EvzA?e=yw7i2B)**
+
+**PROJECT [Drive Documentation](https://drive.google.com/drive/folders/1Z8SYAqlAbgEsgCbj7WqNHCOWgJUzPnSr)**
 
 ### General Diagram Plan
 
