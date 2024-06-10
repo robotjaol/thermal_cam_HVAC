@@ -18,7 +18,11 @@
 
     <main class="main">
       <div class="video-container">
-        <img src="{{ url_for('video_feed') }}" width="1200" />
+        <img
+          src="{{ url_for('video_feed') }}"
+          width="1200"
+          alt="Thermal Video Feed"
+        />
       </div>
       <div class="row">
         <div class="card">
@@ -60,17 +64,31 @@
             );
           });
         }
-        setInterval(updateData, 5000); // Fetch data every 5 seconds
+        setInterval(updateData, 1000); 
         updateData(); // Initial fetch
 
         $("#tcp-toggle").change(function () {
           const status = $(this).is(":checked");
-          $.post("/toggle_tcp", { tcp_status: status });
+          $.post("/toggle_tcp", { tcp_status: status }, function(data, status) {
+            if (status === 'success') {
+              console.log("TCP status updated successfully");
+            } else {
+              console.error("Failed to update TCP status");
+              $("#tcp-toggle").prop("checked", !status); // Revert back if update fails
+            }
+          });
         });
 
         $("#microcontroller-toggle").change(function () {
           const status = $(this).is(":checked");
-          $.post("/toggle_microcontroller", { microcontroller_status: status });
+          $.post("/toggle_microcontroller", { microcontroller_status: status }, function(data, status) {
+            if (status === 'success') {
+              console.log("Microcontroller status updated successfully");
+            } else {
+              console.error("Failed to update microcontroller status");
+              $("#microcontroller-toggle").prop("checked", !status); // Revert back if update fails
+            }
+          });
         });
 
         function updateDateTime() {
@@ -92,6 +110,7 @@
     </script>
   </body>
 </html>
+
 
 <!-- DEBUGGGGGGGGGGGGGGGGGGGGGGG -->
 <!-- <!DOCTYPE html>
