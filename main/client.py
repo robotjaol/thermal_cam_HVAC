@@ -1,30 +1,34 @@
 import socket
 import time
 
-# server_ip = "192.168.1.100"   #connect with router/etherner/W5500
-server_ip = "127.0.0.1"         #connect with IP computer
+server_ip = "127.0.0.1"
 server_port = 8899
 
 def run_client():
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client.connect((server_ip, server_port))
 
     try:
+        client.connect((server_ip, server_port))
+        print("Connected to server")
+
         while True:
             data = client.recv(1024).decode()
-            if data.startswith('--frame'):
-                continue
-            else:
-                try:
-                    # Memisahkan jumlah orang dan suhu rata-rata dari data yang diterima
-                    num_people, avg_temp = map(float, data.split(','))
-                    print(f"Jumlah orang: {int(num_people)}")
-                    print(f"Suhu rata-rata: {avg_temp:.2f} C")
-                    # Kirimkan konfirmasi ke server
-                    client.sendall("jon".encode())
-                except ValueError:
-                    print(f"Received invalid data: {data}")
-            time.sleep(1)  # Menambahkan jeda selama 1 detik
+            if not data:
+                break
+
+            try:
+                num_people, avg_temp = map(float, data.split(','))
+                print(f"Number of People: {int(num_people)}")
+                print(f"Average Temperature: {avg_temp:.2f}°C")
+
+                # Send acknowledgment to server
+                client.sendall("ACK".encode())
+            except ValueError as ve:
+                print(f"Error: Received invalid data format - {ve}")
+            except Exception as e:
+                print(f"Error: {e}")
+
+            time.sleep(1)
     except ConnectionError as ce:
         print(f"Connection error: {ce}")
     except Exception as e:
@@ -34,6 +38,9 @@ def run_client():
 
 if __name__ == '__main__':
     run_client()
+
+
+
 
 
 

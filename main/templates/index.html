@@ -1,57 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CCTV Thermal HVAC Monitoring</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    // Your JavaScript code here
-  </script>
-</head>
-<body>
-  <header>
-    <h1>Monitoring CCTV Thermal HVAC</h1>
-    <p id="datetime"></p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CCTV Thermal HVAC Monitoring</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Monitoring CCTV Thermal HVAC</h1>
+      <p id="datetime"></p>
+    </header>
 
-  <main class="main">
-    <div class="video-container">
-      <img src="/video_feed" width="800" />
-    </div>
-    <div class="row">
-      <div class="card">
-        <h2>TCP</h2>
-        <label class="toggle-switch">
-          <input type="checkbox" id="tcp-toggle" />
-          <span class="slider"></span>
-        </label>
+    <main class="main">
+      <div class="video-container">
+        <img src="{{ url_for('video_feed') }}" width="1200" />
       </div>
-      <div class="card">
-        <h2>Air Conditioner Temperature</h2>
-        <div id="air-conditioner" class="temperature-control">
-          <button class="control-button up-button">&#9650;</button>
-          <p><span id="AirConditionerTemp">24</span>°C</p>
-          <button class="control-button down-button">&#9660;</button>
+      <div class="row">
+        <div class="card">
+          <h2>TCP</h2>
+          <label class="toggle-switch">
+            <input type="checkbox" id="tcp-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="card">
+          <h2>Number of People</h2>
+          <p><span id="NumHeads">0</span></p>
+        </div>
+        <div class="card">
+          <h2>Average Temperature</h2>
+          <p><span id="AvgTemp">0.00°C</span></p>
+        </div>
+        <div class="card">
+          <h2>Microcontroller</h2>
+          <label class="toggle-switch">
+            <input type="checkbox" id="microcontroller-toggle" />
+            <span class="slider"></span>
+          </label>
         </div>
       </div>
-      <div class="card">
-        <h2>CCTV Average Temperature</h2>
-        <p><span id="CCTVTemp">35</span>°C</p>
-      </div>
-      <div class="card">
-        <h2>Micro Controller</h2>
-        <label class="toggle-switch">
-          <input type="checkbox" id="microcontroller-toggle" />
-          <span class="slider"></span>
-        </label>
-      </div>
-    </div>
-  </main>
-</body>
+    </main>
+
+    <script>
+      $(document).ready(function () {
+        function updateData() {
+          $.getJSON("/data", function (data) {
+            console.log("data received: ", data);
+            $("#NumHeads").text(data.num_heads); // Update number of people
+            $("#AvgTemp").text(data.avg_temp.toFixed(2) + "°C"); // Update average temperature
+            $("#tcp-toggle").prop("checked", data.tcp_status);
+            $("#microcontroller-toggle").prop(
+              "checked",
+              data.microcontroller_status
+            );
+          });
+        }
+        setInterval(updateData, 5000); // Fetch data every 5 seconds
+        updateData(); // Initial fetch
+
+        $("#tcp-toggle").change(function () {
+          const status = $(this).is(":checked");
+          $.post("/toggle_tcp", { tcp_status: status });
+        });
+
+        $("#microcontroller-toggle").change(function () {
+          const status = $(this).is(":checked");
+          $.post("/toggle_microcontroller", { microcontroller_status: status });
+        });
+
+        function updateDateTime() {
+          const now = new Date();
+          const formattedDateTime = now.toLocaleString("en-US", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric",
+            hour12: true,
+          });
+          $("#datetime").text(formattedDateTime);
+        }
+        setInterval(updateDateTime, 1000);
+      });
+    </script>
+  </body>
 </html>
 
+<!-- DEBUGGGGGGGGGGGGGGGGGGGGGGG -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CCTV Thermal HVAC Monitoring</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Monitoring CCTV Thermal HVAC</h1>
+      <p id="datetime"></p>
+    </header>
+
+    <main class="main">
+      <div class="video-container">
+        <img src="{{ url_for('video_feed') }}" width="1200" />
+      </div>
+      <div class="row">
+        <div class="card">
+          <h2>TCP</h2>
+          <label class="toggle-switch">
+            <input type="checkbox" id="tcp-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="card">
+          <h2>Number of People</h2>
+          <p><span id="NumHeads"></span></p>
+        </div>
+        <div class="card">
+          <h2>Average Temperature</h2>
+          <p><span id="AvgTemp"></span></p>
+        </div>
+        <div class="card">
+          <h2>Microcontroller</h2>
+          <label class="toggle-switch">
+            <input type="checkbox" id="microcontroller-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      $(document).ready(function () {
+        function updateData() {
+          $.getJSON("/data", function (data) {
+            $("#NumHeads").text(data.num_heads); // Update number of people
+            $("#AvgTemp").text(data.avg_temp.toFixed(2) + "°C"); // Update average temperature
+            $("#tcp-toggle").prop("checked", data.tcp_status);
+            $("#microcontroller-toggle").prop(
+              "checked",
+              data.microcontroller_status
+            );
+          });
+        }
+        setInterval(updateData, 5000); 
+        updateData(); 
+
+        $("#tcp-toggle").change(function () {
+          const status = $(this).is(":checked");
+          $.post("/toggle_tcp", { tcp_status: status });
+        });
+
+        $("#microcontroller-toggle").change(function () {
+          const status = $(this).is(":checked");
+          $.post("/toggle_microcontroller", { microcontroller_status: status });
+        });
+
+        function updateDateTime() {
+          const now = new Date();
+          const formattedDateTime = now.toLocaleString("en-US", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric",
+            hour12: true,
+          });
+          $("#datetime").text(formattedDateTime);
+        }
+        setInterval(updateDateTime, 1000);
+      });
+    </script>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thermal Monitoring System</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Thermal Monitoring System</h1>
+    </header>
+    <div class="main">
+      <div class="video-container">
+        <img
+          id="video_feed"
+          src="{{ url_for('video_feed') }}"
+          alt="Thermal Feed"
+        />
+      </div>
+      <div class="row">
+        <div class="card">
+          <h2>Number of People Detected</h2>
+          <p><span id="head_count">0</span></p>
+        </div>
+        <div class="card">
+          <h2>Average Temperature</h2>
+          <p><span id="avg_temp">0.00</span>°C</p>
+        </div>
+      </div>
+      -->
+<!-- <script>
+        $(document).ready(function () {
+          function updateData() {
+            $.ajax({
+              url: "/data",
+              type: "GET",
+              dataType: "json",
+              success: function (data) {
+                $("#head_count").text(data.num_heads);
+                $("#avg_temp").text(data.avg_temp.toFixed(2));
+              },
+            });
+          }
+          setInterval(updateData, 500);
+        });
+      </script>
+    </div>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CCTV Thermal HVAC Monitoring</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        function updateData() {
+          $.getJSON("/data", function (data) {
+            $("#NumHeads").text(data.num_heads); // Update number of people
+            $("#AvgTemp").text(data.avg_temp + "°C"); // Update average temperature
+            $("#tcp-toggle").prop("checked", data.tcp_status);
+            $("#microcontroller-toggle").prop(
+              "checked",
+              data.microcontroller_status
+            );
+          });
+        }
+        setInterval(updateData, 5000); // Fetch data every 5 seconds
+        updateData(); // Initial fetch
+
+        $("#tcp-toggle").change(function () {
+          const status = $(this).is(":checked");
+          $.post("/toggle_tcp", { tcp_status: status });
+        });
+
+        $("#microcontroller-toggle").change(function () {
+          const status = $(this).is(":checked");
+          $.post("/toggle_microcontroller", { microcontroller_status: status });
+        });
+
+        $(".up-button").click(function () {
+          adjustTemperature(1);
+        });
+
+        $(".down-button").click(function () {
+          adjustTemperature(-1);
+        });
+
+        function adjustTemperature(change) {
+          let currentTemp = parseInt($("#AirConditionerTemp").text());
+          let newTemp = currentTemp + change;
+          $.post(
+            "/adjust_temperature",
+            { air_conditioner_temp: newTemp },
+            function (response) {
+              if (response.success) {
+                $("#AirConditionerTemp").text(newTemp + "°C");
+              } else {
+                alert("Failed to update temperature");
+              }
+            }
+          );
+        }
+
+        function updateDateTime() {
+          const now = new Date();
+          const formattedDateTime = now.toLocaleString("en-US", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric",
+            hour12: true,
+          });
+          $("#datetime").text(formattedDateTime);
+        }
+        setInterval(updateDateTime, 1000);
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Monitoring CCTV Thermal HVAC</h1>
+      <p id="datetime"></p>
+    </header>
+
+    <main class="main">
+      <div class="video-container">
+        <img src="/video_feed" width="1200" />
+      </div>
+      <div class="row">
+        <div class="card">
+          <h2>TCP</h2>
+          <label class="toggle-switch">
+            <input type="checkbox" id="tcp-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="card">
+          <h2>Number of People</h2>
+          <p><span id="NumHeads"></span></p>
+        </div>
+        <div class="card">
+          <h2>Average Temperature</h2>
+          <p><span id="AvgTemp"></span></p>
+        </div>
+        <div class="card">
+          <h2>Microcontroller</h2>
+          <label class="toggle-switch">
+            <input type="checkbox" id="microcontroller-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </main>
+  </body>
+</html> -->
 
 <!-- ONLY PATH THERMAL 
 

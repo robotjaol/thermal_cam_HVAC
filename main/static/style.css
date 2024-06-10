@@ -25,10 +25,11 @@ header h1 {
 }
 
 .video-container img {
-  max-width: 100%;
-  height: auto;
+  width: 750px;
+  height: 410px;
   border-radius: 10px;
   margin-bottom: 2em;
+  justify-content: center;
 }
 
 .row {
