@@ -1,4 +1,59 @@
-<!-- ONLY PATH THERMAL  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCTV Thermal HVAC Monitoring</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // Your JavaScript code here
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Monitoring CCTV Thermal HVAC</h1>
+    <p id="datetime"></p>
+  </header>
+
+  <main class="main">
+    <div class="video-container">
+      <img src="/video_feed" width="800" />
+    </div>
+    <div class="row">
+      <div class="card">
+        <h2>TCP</h2>
+        <label class="toggle-switch">
+          <input type="checkbox" id="tcp-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="card">
+        <h2>Air Conditioner Temperature</h2>
+        <div id="air-conditioner" class="temperature-control">
+          <button class="control-button up-button">&#9650;</button>
+          <p><span id="AirConditionerTemp">24</span>°C</p>
+          <button class="control-button down-button">&#9660;</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2>CCTV Average Temperature</h2>
+        <p><span id="CCTVTemp">35</span>°C</p>
+      </div>
+      <div class="card">
+        <h2>Micro Controller</h2>
+        <label class="toggle-switch">
+          <input type="checkbox" id="microcontroller-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
+
+
+<!-- ONLY PATH THERMAL 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +76,7 @@
     </div>
     <script src="script.js"></script>
   </body>
-</html>
+</html> -->
 
 <!-- WEBCAM THERMAL YOLO MASUK -->
 
