@@ -5,6 +5,10 @@
 
 **PROJECT [Drive Documentation](https://drive.google.com/drive/folders/1Z8SYAqlAbgEsgCbj7WqNHCOWgJUzPnSr)**
 
+
+### Control System Documentation
+![img](doc/img/control_system_pbl.png)
+
 ### General Diagram Plan
 
 Here's the diagram that i made
